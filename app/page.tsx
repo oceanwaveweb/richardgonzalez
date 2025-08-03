@@ -302,12 +302,11 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-      <div className="w-full min-h-screen relative bg-red-500">
+      <div className="w-full relative ">
         <Presave />
       </div>
 
-      <Intro />
-
+      <Section />
       <Description />
       <Section />
 
@@ -345,7 +344,7 @@ export default function Home() {
         </div>
       </section>
       <Index />
-      {/* Event Dates Preview */}
+      {/* Event Dates Preview 
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <motion.div
@@ -382,7 +381,6 @@ export default function Home() {
                     </h3>
                     <p className="text-sm text-gray-400">{item.description}</p>
 
-                    {/* Contact Button */}
                     <Link href="/contact">
                       <button className="mt-4 inline-flex items-center gap-2 text-sm text-orange-500 border border-orange-500 px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition-colors">
                         Contact for Details
@@ -396,7 +394,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+*/}
       {/* Merchandise Preview
       <section className="py-20 px-6 bg-zinc-900">
         <div className="container mx-auto">
@@ -479,7 +477,6 @@ export default function Home() {
             {/* Designed by with logo instead of text */}
             <div className="text-sm relative z-50 min-w-[800px] py-4 hidden text-gray-500 italic md:flex flex-row items-start justify-start md:pl-[200px] space-x-2">
               <p className="relative">
-                Designed & Developed by
                 <Link
                   href="https://oceanwaveweb.com/"
                   className="absolute -top-[90px] -right-[200px] text-blue flex items-center space-x-2"
@@ -524,7 +521,7 @@ export default function Home() {
 
             {/* Designed by (mobile only) */}
             <div className="text-sm py-4 md:hidden w-screen text-gray-500 italic flex flex-row items-center justify-center space-x-2">
-              <p>Designed & Developed by</p>
+              
               <Link
                 href="https://oceanwaveweb.com/"
                 className="text-blue flex items-center space-x-2"

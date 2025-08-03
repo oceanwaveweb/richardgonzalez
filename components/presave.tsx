@@ -123,7 +123,7 @@ const Presave = () => {
       {/* Mobile Layout */}
       <div className="lg:hidden w-full bg-black relative">
         {/* Sticky Image Container */}
-        <div className="sticky top-0 w-full h-screen z-0 bg-black">
+        <div className="sticky top-0 w-full h-96 md:h-screen z-0 bg-black">
           <Image
             src="https://static.found.ee/user/292289/res-bc9151d3-e682-4d49-86b0-298473af159e-El-Juego3.jpg"
             alt="El Juego Album Cover"
@@ -137,9 +137,9 @@ const Presave = () => {
         </div>
 
         {/* Scrollable Content Area */}
-        <div className="relative z-10 -mt-screen">
+        <div className="relative z-10 -mt-96 md:-mt-screen">
           {/* Spacer to push card down initially */}
-          <div className="h-screen"></div>
+          <div className="h-96 md:h-screen"></div>
 
           {/* Card that scrolls over the image */}
           <div className="relative bg-gradient-to-t from-black via-black/80 to-transparent pt-8 pb-8">

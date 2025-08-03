@@ -274,7 +274,7 @@ export default function VideosPage() {
             {/* Designed by with logo instead of text */}
             <div className="text-sm relative z-50 min-w-[800px] py-4 hidden text-gray-500 italic md:flex flex-row items-start justify-start md:pl-[200px] space-x-2">
               <p className="relative">
-                Designed & Developed by
+                 
                 <Link
                   href="https://oceanwaveweb.com/"
                   className="absolute -top-[90px] -right-[200px] text-blue flex items-center space-x-2"
@@ -319,7 +319,7 @@ export default function VideosPage() {
 
             {/* Designed by (mobile only) */}
             <div className="text-sm py-4 md:hidden w-screen text-gray-500 italic flex flex-row items-center justify-center space-x-2">
-              <p>Designed & Developed by</p>
+              
               <Link
                 href="https://oceanwaveweb.com/"
                 className="text-blue flex items-center space-x-2"
