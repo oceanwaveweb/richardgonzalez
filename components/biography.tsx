@@ -18,8 +18,6 @@ export default function BIO() {
       </div>
     );
   }
-
-  // BIO content split into sections to pair with images
   const bioSections = [
     {
       id: 1,
