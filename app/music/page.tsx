@@ -29,11 +29,26 @@ export default function MusicPage() {
 
   const albums = [
     {
+      link: "https://open.spotify.com/track/0xZ8rDwveRAwKcSaPuyIgE?si=e414535860054694",
+      type: "SINGLE",
+      year: "2025",
+      title: "EL JUEGO",
+      image:
+        "https://static.found.ee/user/292289/res-bc9151d3-e682-4d49-86b0-298473af159e-El-Juego3.jpg",
+    },
+    {
       link: "https://open.spotify.com/track/4Oskr6ugD83CDetiO14oFv?si=06b44452036c4845",
       type: "SINGLE",
       title: "MENTIRA",
-      year: "2023",
+      year: "2025",
       image: "/mentira.png",
+    },
+    {
+      link: "https://open.spotify.com/track/70Xx30Y8cooQsZ9vfDivbh?si=9854fbcb292b4747",
+      type: "SINGLE",
+      title: "TENERTE TODA",
+      year: "2024",
+      image: "tenerte.png",
     },
     {
       link: "https://open.spotify.com/track/59NDW6PTBPxQEEsEDyQDx4?si=c19ca19a929443b0",
@@ -46,8 +61,15 @@ export default function MusicPage() {
       link: "https://open.spotify.com/track/6Dfb99B87yD2B0UCVzqYG7?si=c0814621bfbf4e87",
       type: "SINGLE",
       title: "SIN TI NO HAY FIESTA",
-      year: "2023",
+      year: "2022",
       image: "/sinti.png",
+    },
+    {
+      link: "https://open.spotify.com/track/17JFoDfP0WStPiw7VhvDVj?si=0bfdcdb06d6e43b4",
+      type: "SINGLE",
+      title: "CULPABLE",
+      year: "2021",
+      image: "/image4.png",
     },
   ];
 
@@ -265,7 +287,7 @@ export default function MusicPage() {
           animate={{ opacity: loaded ? 1 : 0, y: loaded ? 0 : 20 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <h2 className="text-3xl font-light tracking-widest mb-12">ALBUMS</h2>
+          <h2 className="text-3xl font-light tracking-widest mb-12">SINGLES</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {albums.map((album, index) => (
               <motion.div
@@ -298,54 +320,6 @@ export default function MusicPage() {
                     {album.title}
                   </h3>
                   <p className="text-sm text-gray-400">{album.year}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: loaded ? 1 : 0, y: loaded ? 0 : 20 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-20"
-        >
-          <h2 className="text-3xl font-light tracking-widest mb-12">SINGLES</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {singles.map((single, index) => (
-              <motion.div
-                key={single.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: loaded ? 1 : 0, y: loaded ? 0 : 20 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="group flex gap-4"
-              >
-                <div className="relative overflow-hidden flex-shrink-0">
-                  <Image
-                    src={single.image || "/placeholder.svg"}
-                    alt={single.title}
-                    width={80}
-                    loading="lazy"
-                    height={80}
-                    className="w-20 h-20 object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <Link
-                      href={single.link}
-                      className="p-1 bg-orange-500 rounded-full"
-                    >
-                      <Play className="h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <h3 className="text-base font-light tracking-wider">
-                    {single.title}
-                  </h3>
-                  {single.featuring && (
-                    <p className="text-xs text-gray-400">{single.featuring}</p>
-                  )}
-                  <p className="text-xs text-gray-500 mt-1">{single.year}</p>
                 </div>
               </motion.div>
             ))}
@@ -393,75 +367,53 @@ export default function MusicPage() {
 
       <CTASection1 />
 
-      <footer className="py-10 px-6 border-t border-gray-800">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Copyright */}
-            <div className="text-sm text-gray-500">
-              © {new Date().getFullYear()}. ALL RIGHTS RESERVED.
-            </div>
+      <footer className="bg-black text-gray-400 border-t border-gray-800 px-6 py-10">
+        <div className="max-w-7xl mx-auto flex flex-col gap-10 md:flex-row md:justify-between md:items-center">
+          {/* Left Section: Copyright */}
+          <div className="text-center md:text-left text-sm">
+            © {new Date().getFullYear()}. All rights reserved.
+          </div>
 
-            {/* Designed by with logo instead of text */}
-            <div className="text-sm relative z-50 min-w-[800px] py-4 hidden text-gray-500 italic md:flex flex-row items-start justify-start md:pl-[200px] space-x-2">
-              <p className="relative">
-                 
-                <Link
-                  href="https://oceanwaveweb.com/"
-                  className="absolute -top-[90px] -right-[200px] text-blue flex items-center space-x-2"
-                >
-                  <Image
-                    src="/logodark.png" // Replace with your logo path
-                    alt="OceanwaveWeb Logo"
-                    width={200}
-                    height={100}
-                  />
-                </Link>
-              </p>
-            </div>
-
-            {/* Social Icons (mobile only) */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: loaded ? 1 : 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="md:hidden flex flex-row flex-wrap justify-center space-x-6"
+          {/* Middle Section: Designed by - Desktop Only */}
+          <div className="hidden md:flex items-center justify-center relative min-w-[300px] h-[80px]">
+            <Link
+              href="https://oceanwaveweb.com/"
+              className="absolute -top-15 right-0"
             >
-              {/* ...social icons unchanged... */}
-            </motion.div>
+              <Image
+                src="/logodark.png"
+                alt="OceanwaveWeb Logo"
+                width={200}
+                height={100}
+              />
+            </Link>
+          </div>
 
-            {/* Contact Info */}
-            <div className="flex flex-col md:flex-row gap-2 md:gap-6 text-sm text-gray-400 items-center">
-              <Link
-                href="mailto:info@richardgonzalezmusic.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors underline italic"
-              >
-                Mail
-              </Link>
-              <Link
-                href="tel:+19678971234"
-                className="hover:text-white transition-colors underline italic"
-              >
-                Phone
-              </Link>
-            </div>
-
-            {/* Designed by (mobile only) */}
-            <div className="text-sm py-4 md:hidden w-screen text-gray-500 italic flex flex-row items-center justify-center space-x-2">
-              
-              <Link
-                href="https://oceanwaveweb.com/"
-                className="text-blue flex items-center space-x-2"
-              >
+          {/* Right Section: Contact Info */}
+          <div className="flex flex-col md:flex-row gap-3 text-center md:text-left text-sm items-center">
+            <Link
+              href="mailto:info@richardgonzalezmusic.com"
+              className="hover:text-white transition underline italic"
+            >
+              Mail: info@richardgonzalezmusic.com
+            </Link>
+            <Link
+              href="tel:+19678971234"
+              className="hover:text-white transition underline italic z-20"
+            >
+              Phone: +1 (967) 897-1234
+            </Link>
+            <Link href="https://oceanwaveweb.com/" className="md:hidden">
+              <div className="w-[350px] h-[50px] z-0 relative">
                 <Image
                   src="/logodark.png"
                   alt="OceanwaveWeb Logo"
-                  width={100}
-                  height={20}
+                  width={200}
+                  height={100}
+                  className="absolute -top-[75px] left-[80px]"
                 />
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         </div>
       </footer>

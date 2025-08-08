@@ -15,16 +15,16 @@ interface Release {
 
 const latestReleases: Release[] = [
   {
+    link: "https://open.spotify.com/track/0xZ8rDwveRAwKcSaPuyIgE?si=e414535860054694",
+    type: "SINGLE",
+    title: "EL JUEGO",
+    image: "https://static.found.ee/user/292289/res-bc9151d3-e682-4d49-86b0-298473af159e-El-Juego3.jpg",
+  },
+  {
     link: "https://open.spotify.com/track/4Oskr6ugD83CDetiO14oFv?si=06b44452036c4845",
     type: "SINGLE",
     title: "MENTIRA",
     image: "/AF939BB3-F116-4319-A0E8-02D3FB9AE031.JPG",
-  },
-  {
-    link: "https://open.spotify.com/track/59NDW6PTBPxQEEsEDyQDx4?si=c19ca19a929443b0",
-    type: "SINGLE",
-    title: "INACCESIBLE",
-    image: "/inaccesible.png",
   },
   {
     link: "https://open.spotify.com/track/6Dfb99B87yD2B0UCVzqYG7?si=c0814621bfbf4e87",

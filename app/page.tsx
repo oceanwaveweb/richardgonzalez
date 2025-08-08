@@ -306,9 +306,11 @@ export default function Home() {
         <Presave />
       </div>
 
-      <Section />
-      <Description />
-      <Section />
+      <div className="w-full hidden md:block relative">
+        <Section />
+        <Description />
+        <Section />
+      </div>
 
       {/* Featured Video Section */}
       <section className="py-20 px-6 bg-zinc-900">
@@ -466,74 +468,53 @@ export default function Home() {
       <CTASection />
 
       {/* Footer */}
-      <footer className="py-10 px-6 border-t border-gray-800">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Copyright */}
-            <div className="text-sm text-gray-500">
-              © {new Date().getFullYear()}. ALL RIGHTS RESERVED.
-            </div>
+      <footer className="bg-black text-gray-400 border-t border-gray-800 px-6 py-10">
+        <div className="max-w-7xl mx-auto flex flex-col gap-10 md:flex-row md:justify-between md:items-center">
+          {/* Left Section: Copyright */}
+          <div className="text-center md:text-left text-sm">
+            © {new Date().getFullYear()}. All rights reserved.
+          </div>
 
-            {/* Designed by with logo instead of text */}
-            <div className="text-sm relative z-50 min-w-[800px] py-4 hidden text-gray-500 italic md:flex flex-row items-start justify-start md:pl-[200px] space-x-2">
-              <p className="relative">
-                <Link
-                  href="https://oceanwaveweb.com/"
-                  className="absolute -top-[90px] -right-[200px] text-blue flex items-center space-x-2"
-                >
-                  <Image
-                    src="/logodark.png" // Replace with your logo path
-                    alt="OceanwaveWeb Logo"
-                    width={200}
-                    height={100}
-                  />
-                </Link>
-              </p>
-            </div>
-
-            {/* Social Icons (mobile only) */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: loaded ? 1 : 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="md:hidden flex flex-row flex-wrap justify-center space-x-6"
+          {/* Middle Section: Designed by - Desktop Only */}
+          <div className="hidden md:flex items-center justify-center relative min-w-[300px] h-[80px]">
+            <Link
+              href="https://oceanwaveweb.com/"
+              className="absolute -top-15 right-0"
             >
-              {/* ...social icons unchanged... */}
-            </motion.div>
+              <Image
+                src="/logodark.png"
+                alt="OceanwaveWeb Logo"
+                width={200}
+                height={100}
+              />
+            </Link>
+          </div>
 
-            {/* Contact Info */}
-            <div className="flex flex-col md:flex-row gap-2 md:gap-6 text-sm text-gray-400 items-center">
-              <Link
-                href="mailto:info@richardgonzalezmusic.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition-colors underline italic"
-              >
-                Mail
-              </Link>
-              <Link
-                href="tel:+19678971234"
-                className="hover:text-white transition-colors underline italic"
-              >
-                Phone
-              </Link>
-            </div>
-
-            {/* Designed by (mobile only) */}
-            <div className="text-sm py-4 md:hidden w-screen text-gray-500 italic flex flex-row items-center justify-center space-x-2">
-              
-              <Link
-                href="https://oceanwaveweb.com/"
-                className="text-blue flex items-center space-x-2"
-              >
+          {/* Right Section: Contact Info */}
+          <div className="flex flex-col md:flex-row gap-3 text-center md:text-left text-sm items-center">
+            <Link
+              href="mailto:info@richardgonzalezmusic.com"
+              className="hover:text-white transition underline italic"
+            >
+              Mail: info@richardgonzalezmusic.com
+            </Link>
+            <Link
+              href="tel:+19678971234"
+              className="hover:text-white transition underline italic z-20"
+            >
+              Phone: +1 (967) 897-1234
+            </Link>
+            <Link href="https://oceanwaveweb.com/" className="md:hidden">
+              <div className="w-[350px] h-[50px] z-0 relative">
                 <Image
                   src="/logodark.png"
                   alt="OceanwaveWeb Logo"
-                  width={100}
-                  height={20}
+                  width={200}
+                  height={100}
+                  className="absolute -top-[75px] left-[80px]"
                 />
-              </Link>
-            </div>
+              </div>
+            </Link>
           </div>
         </div>
       </footer>

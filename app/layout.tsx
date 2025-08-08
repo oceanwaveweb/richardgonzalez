@@ -6,8 +6,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Rock Star | Official Website",
-  description: "Official website of Rock Star - Music, Events, and More",
+  title: "Richard Gonzalez",
+  description: "Official website of Richard Gonzalez - Music, Events, and More",
 };
 
 export default function RootLayout({

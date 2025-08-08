@@ -44,7 +44,7 @@ const Presave = () => {
           isMobile ? "text-lg" : "text-xl"
         }`}
       >
-        PRE-SAVE ON
+        NEW MUSIC OUT - LISTEN NOW!
       </h2>
 
       <div className="space-y-3">

@@ -14,9 +14,9 @@ interface MusicVideo {
 // Your YouTube videos
 const videosData: MusicVideo[] = [
   {
-    link: "https://youtu.be/uO-7ubGvOIw?si=urgU1EmdyWdOkifz", // Imagine Dragons - Radioactive
-    title: "Sin Saber A Qué Sabías",
-    thumbnail: "/sinsaber.jpg",
+    link: "https://youtu.be/QWejw_JWfDg?si=vPAgqgrWFzBfwxSb", // Imagine Dragons - Radioactive
+    title: "El Juego",
+    thumbnail: "https://static.found.ee/user/292289/res-bc9151d3-e682-4d49-86b0-298473af159e-El-Juego3.jpg",
   },
   {
     link: "https://youtu.be/0anSVzx89Io?si=HHghRjdBNUl64aoY", // Ed Sheeran - Shape of You
